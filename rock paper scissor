@@ -1,0 +1,44 @@
+# Rock-paper-scissors game
+
+import random
+
+# create a list of play options
+options = ['rock', 'paper','scissors']
+
+while True:
+    # choice any one form the options list
+    print('enter your chose \nrock, \npaper, \n scissors, ')
+
+    # enter your chose in words
+    user_choice = input('enter your chose :')
+
+    # computer is pick from the options any one
+    computer_choice = random.choice(options)
+
+    print(f'you chose : {user_choice}')
+    print(f'computer chose : {computer_choice}')
+
+    # if  computer choice and used choice is same it will be a tie!
+    if user_choice == computer_choice:
+        print('it is a tie!')
+
+    # if  user choice is rock and computer choice is scissors . rock win
+    elif user_choice == 'rock' and computer_choice == 'scissors':
+        print('you win')
+
+    # if  user choice is scissors and computer choice is paper . scissors win
+    elif user_choice == 'scissors' and computer_choice == 'paper':
+        print('you win')
+
+    # if  user choice is paper and computer choice is rock . paper win
+    elif user_choice == 'paper' and computer_choice == 'rock':
+        print('you win')
+
+    # check if user wants another game
+    # break the while loop if answer  no
+    next_game = input('do you play another game ? ( yes/no) : ')
+    if next_game == 'no':
+        break
+
+    else:
+        print('computer win')
